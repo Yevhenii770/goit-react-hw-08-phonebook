@@ -9,7 +9,6 @@ export const Layout = () => {
       <Suspense>
         <Outlet />
       </Suspense>
-      {/* alert("Нотификация!!"); */}
     </div>
   );
 };

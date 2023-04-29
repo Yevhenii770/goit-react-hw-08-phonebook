@@ -1,29 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout';
 import { RestrictedRoute } from './RestrictedRoute';
 
-const HomePage = lazy(() => import('pages/Home'));
-
-const RegisterPage = lazy(() => import('pages/Register'));
-
-const LoginPage = lazy(() => import('pages/Login'));
-const ContactsPage = lazy(() => import('pages/Contacts'));
+import Home from 'pages/Home';
+import Contacts from 'pages/Contacts';
+import Login from 'pages/Login';
+import Register from 'pages/Register';
 
 export default function App() {
   return (
     <>
+      <Layout />
       <Routes>
-        <Route path="/" element={<Layout />} />
-        {/* <Route index element={<HomePage />} /> */}
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute redirectTo="/tasks" component={<RegisterPage />} />
-          }
-        />
-        {/* <Route path="/login" element={ } />
-        <Route path="/tasks" element={ } /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );
