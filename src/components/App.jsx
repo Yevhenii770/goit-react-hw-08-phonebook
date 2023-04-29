@@ -1,27 +1,30 @@
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
-import Contacts from './Contacts/Contacts';
+import { Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
+import { Layout } from './Layout';
+import { RestrictedRoute } from './RestrictedRoute';
 
-import { showModal } from '.././redux/userSlice';
+const HomePage = lazy(() => import('pages/Home'));
+
+const RegisterPage = lazy(() => import('pages/Register'));
+
+const LoginPage = lazy(() => import('pages/Login'));
+const ContactsPage = lazy(() => import('pages/Contacts'));
 
 export default function App() {
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <Contacts>
-        <h2
-          style={{
-            textAlign: 'center',
-            paddingBottom: '30px',
-          }}
-        >
-          Contacts
-        </h2>
-        <Filter />
-        <ContactList />
-      </Contacts>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        {/* <Route index element={<HomePage />} /> */}
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute redirectTo="/tasks" component={<RegisterPage />} />
+          }
+        />
+        {/* <Route path="/login" element={ } />
+        <Route path="/tasks" element={ } /> */}
+      </Routes>
+    </>
   );
 }

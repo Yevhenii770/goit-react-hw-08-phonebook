@@ -1,7 +1,6 @@
 import { PropTypes } from 'prop-types';
 
 const Contacts = props => {
-  console.log(props.children);
   return (
     <>
       <div>

@@ -4,13 +4,10 @@ import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 export const userFilter = createSlice({
-  // Имя слайса
   name: 'filter',
-  // Начальное состояние редюсера слайса
   initialState: {
     filterValue: '',
   },
-  // Объект редюсеров
   reducers: {
     filterQuery(state, action) {
       state.filterValue = action.payload;
@@ -52,5 +49,4 @@ export const { deleteContacts, addData } = userData.actions;
 /////
 // SELECTORS
 ////
-
 export const getDataArray = state => state.data.items;
