@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { userFilter, dataReducer, userModal } from './userSlice';
+import { userFilter, dataReducer } from './userSlice';
 import {
   persistStore,
   FLUSH,
@@ -14,7 +14,6 @@ export const store = configureStore({
   reducer: {
     filter: userFilter.reducer,
     data: dataReducer,
-    modal: userModal.reducer,
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({

@@ -18,18 +18,6 @@ export const userFilter = createSlice({
   },
 });
 
-export const userModal = createSlice({
-  name: 'modal',
-  initialState: {
-    showModal: false,
-  },
-  reducers: {
-    showModal(state, action) {
-      state.showModal = action.payload;
-    },
-  },
-});
-
 const userData = createSlice({
   name: 'data',
   initialState: {
@@ -59,7 +47,6 @@ export const dataReducer = persistReducer(persistConfig, userData.reducer);
 
 // Генераторы экшенов и редюсеров
 export const { filterQuery } = userFilter.actions;
-export const { showModal } = userModal.actions;
 export const { deleteContacts, addData } = userData.actions;
 
 /////
