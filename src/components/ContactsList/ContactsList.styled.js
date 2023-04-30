@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 export const UlOfContact = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 15px;
 `;
 
 export const ContactItem = styled.li`
@@ -11,7 +12,7 @@ export const ContactItem = styled.li`
   justify-content: space-between;
   
   align-items: center;
-      width: calc((100% - 90px)/2);
+      width: calc((100% - 60px)/2);
       border: 1px solid #d4d4d4;
     border-radius: 4px;
     padding: 2px;
