@@ -1,11 +1,11 @@
-import { UlOfContact, ContactItem, Button } from './ContactList.styled';
-import { deleteContacts, getDataArray } from '../../redux/userSlice';
+import { UlOfContact, ContactItem, Button } from './ContactsList.styled';
+import { selectAllContacts } from 'redux/contacts/contacts-selectors';
 import { useSelector, useDispatch } from 'react-redux';
+import { deleteContacts } from 'redux/contacts/contacts-operations';
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const arrayContacts = useSelector(getDataArray);
-  console.log(arrayContacts);
+  const arrayContacts = useSelector(selectAllContacts);
 
   const filterValue = useSelector(state => state.filter.filterValue);
 
