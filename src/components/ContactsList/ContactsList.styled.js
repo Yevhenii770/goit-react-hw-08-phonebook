@@ -3,16 +3,20 @@ import styled from '@emotion/styled';
 export const UlOfContact = styled.ul`
   display: flex;
   flex-wrap: wrap;
-
-  gap: 20px;
+  justify-content: center;
 `;
 
 export const ContactItem = styled.li`
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  
   align-items: center;
-  width: calc((100% - 30px) / 2);
+      width: calc((100% - 90px)/2);
+    margin: 10px;
+      border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    padding: 2px;
+}
 `;
 
 export const Button = styled.button`
