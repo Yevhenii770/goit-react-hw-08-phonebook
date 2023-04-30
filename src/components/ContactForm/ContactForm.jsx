@@ -10,14 +10,12 @@ function ContactForm() {
   const numberInputId = nanoid();
 
   const contacts = useSelector(selectAllContacts);
-
   const dispatch = useDispatch();
 
   const formSubmitHandler = e => {
     e.preventDefault();
 
     const newContact = {
-      id: nanoid(),
       name: e.currentTarget.elements.name.value,
       number: e.currentTarget.elements.number.value,
     };
