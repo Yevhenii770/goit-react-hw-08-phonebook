@@ -1,4 +1,4 @@
-import RingLoader from 'react-spinners/RingLoader';
+import ClimbingBoxLoader from 'react-spinners/ClimbingBoxLoader';
 export default function Home() {
   return (
     <div
@@ -6,10 +6,17 @@ export default function Home() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        position: 'relative',
       }}
     >
-      <div>
-        <RingLoader color="#2196f3" size={120} />
+      <div
+        style={{
+          position: 'absolute',
+          top: '158px',
+          left: '320px',
+        }}
+      >
+        <ClimbingBoxLoader color="#2196f3" size={90} />
       </div>
     </div>
   );
