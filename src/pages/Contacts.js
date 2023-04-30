@@ -6,7 +6,7 @@ import ContactList from 'components/ContactsList/ContactsList';
 import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';
 
-export default function ContactsView() {
+export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoading);
 
