@@ -1,28 +1,43 @@
 import styled from '@emotion/styled';
 
 export const UlOfContact = styled.ul`
-  // list-style-type: circle;
-  // padding: 0;
-  // margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
 `;
 
 export const ContactItem = styled.li`
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 8px;
   align-items: center;
+  width: calc((100% - 30px) / 2);
 `;
 
 export const Button = styled.button`
-  padding: 8px;
-  min-height: 30px;
-  font-size: 14px;
-  text-align: center;
+  display: block;
+  min-width: 75px;
+  height: 40px;
+  border: 0 solid transparent;
+  border-radius: 4px;
   color: #fff;
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-  border-radius: 5px;
-  border: none;
+  background-color: #fb0f0f;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+
+  &:hover {
+    background-color: #f71818a1;
+  }
+`;
+
+export const MainText = styled.h1`
+  text-align: center;
+`;
+
+export const SecondaryText = styled.h2`
+  text-align: center;
+  margin-bottom: 15px;
 `;

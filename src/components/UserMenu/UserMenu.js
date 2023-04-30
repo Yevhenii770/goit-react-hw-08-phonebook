@@ -1,6 +1,7 @@
 import { authOperations, authSelectors } from 'redux/auth';
 import { Username, Wrapper } from './UserMenu.stuled';
 import { useSelector, useDispatch } from 'react-redux';
+import { Button } from './UserMenu.stuled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -9,9 +10,9 @@ export const UserMenu = () => {
   return (
     <Wrapper>
       <Username>Welcome, {name}</Username>
-      <button type="button" onClick={() => dispatch(authOperations.logOut())}>
+      <Button type="button" onClick={() => dispatch(authOperations.logOut())}>
         Logout
-      </button>
+      </Button>
     </Wrapper>
   );
 };

@@ -1,7 +1,16 @@
+import RingLoader from 'react-spinners/RingLoader';
 export default function Home() {
   return (
-    <div>
-      <h1>Home page</h1>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <div>
+        <RingLoader color="#2196f3" size={120} />
+      </div>
     </div>
   );
 }

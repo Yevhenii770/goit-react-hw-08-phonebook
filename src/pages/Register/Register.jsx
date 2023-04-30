@@ -1,17 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authOperations } from '../redux/auth';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import { authOperations } from '../../redux/auth';
+import { Form, Title, Label, Button } from './Register.styled';
+import { TextField } from '@mui/material';
 
 export default function Register() {
   const dispatch = useDispatch();
@@ -42,36 +33,49 @@ export default function Register() {
 
   return (
     <div>
-      <h1>Register page</h1>
+      <Title>Create your account</Title>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
-          Имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <Label>
+          <TextField
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
+        </Label>
 
-        <label style={styles.label}>
-          Почта
-          <input
+        <Label>
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <label style={styles.label}>
-          Пароль
-          <input
+        <Label>
+          <TextField
+            id="outlined-basic"
+            label="Password"
+            variant="outlined"
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <button type="submit">Зарегистрироваться</button>
-      </form>
+        <Button variant="contained" type="submit">
+          Registration
+        </Button>
+      </Form>
     </div>
   );
 }

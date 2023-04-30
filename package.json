@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://Yevhenii770.github.io/goit-react-hw-08-phonebook/",
   "dependencies": {
-    "@emotion/styled": "^11.10.6",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/material": "^5.12.2",
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -15,6 +17,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.8",
     "redux-persist": "^6.0.0",
     "simple-notify": "^0.5.5",
     "web-vitals": "^2.1.3"

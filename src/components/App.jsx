@@ -1,4 +1,4 @@
-import { Route, Routes, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
@@ -7,8 +7,8 @@ import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
 const HomePage = lazy(() => import('../pages/Home'));
-const RegisterPage = lazy(() => import('../pages/Register'));
-const LoginPage = lazy(() => import('../pages/Login'));
+const RegisterPage = lazy(() => import('../pages/Register/Register'));
+const LoginPage = lazy(() => import('../pages/Login/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export default function App() {

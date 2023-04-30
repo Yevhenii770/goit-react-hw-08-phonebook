@@ -1,17 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authOperations } from '../redux/auth';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import { authOperations } from '../../redux/auth';
+import { Form, Title, Label, Button } from './Login.styled';
+import { TextField } from '@mui/material';
 
 export default function LoginView() {
   const dispatch = useDispatch();
@@ -38,31 +29,37 @@ export default function LoginView() {
 
   return (
     <div>
-      <h1>Login page</h1>
+      <Title>Log in to Phonebook</Title>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
-          Почта
-          <input
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <Label>
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <label style={styles.label}>
-          Пароль
-          <input
+        <Label>
+          <TextField
+            id="outlined-basic"
+            label="Password"
+            variant="outlined"
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <button type="submit">Войти</button>
-      </form>
+        <Button variant="contained" type="submit">
+          Log in
+        </Button>
+      </Form>
     </div>
   );
 }
