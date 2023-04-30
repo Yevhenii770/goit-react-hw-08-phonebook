@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { Form, Button, Label, Title } from './ContactForm.styled';
+import { Form, Button, Label } from './ContactForm.styled';
 import { PushNotify, PushNotifyError } from '../Notify/Notify';
 import { selectAllContacts } from 'redux/contacts/contacts-selectors';
 import { addContacts } from 'redux/contacts/contacts-operations';
