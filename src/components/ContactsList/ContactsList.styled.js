@@ -35,15 +35,15 @@ export const Button = styled.button`
   height: 40px;
   border: 0 solid transparent;
   border-radius: 4px;
-  color: #fff;
-  background-color: #fb0f0f;
+  color: #ffff;
+  background-color: #ff000061;
 
   opacity: 1;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
   &:hover {
-    background-color: #f71818a1;
+    background-color: #f71818;
   }
 `;
 
