@@ -8,7 +8,7 @@ export const Form = styled.form`
     border-radius: 4px;
 
     @media screen and (min-width: 0px) and (max-width: 412px) {
-   padding: 5px;
+   padding: 10px;
    width: calc(100% / 1.1);
    margin: 0 auto 25px;
   }
