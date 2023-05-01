@@ -9,13 +9,13 @@ export const UlOfContact = styled.ul`
 
 export const ContactItem = styled.li`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   
-  align-items: center;
-      width: calc((100% - 60px)/2);
-      border: 1px solid #d4d4d4;
-    border-radius: 4px;
-    padding: 2px;
+  width: calc((100% - 30px) / 2);
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  padding: 2px;
 }
 `;
 
