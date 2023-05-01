@@ -5,6 +5,10 @@ export const UlOfContact = styled.ul`
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
+
+  @media screen and (min-width: 0px) and (max-width: 412px) {
+    justify-content: center;
+  }
 `;
 
 export const ContactItem = styled.li`
@@ -16,6 +20,10 @@ export const ContactItem = styled.li`
   border: 1px solid #d4d4d4;
   border-radius: 4px;
   padding: 2px;
+
+  @media screen and (min-width: 0px) and (max-width: 412px) {
+    width: 90%;
+  }
 }
 `;
 
@@ -45,3 +53,16 @@ export const SecondaryText = styled.h2`
   text-align: center;
   margin-bottom: 15px;
 `;
+
+export const TextDiv = styled.div`
+
+}`;
+
+export const Name = styled.p`
+&:first-letter {
+  text-transform: uppercase;
+}
+}`;
+export const Number = styled.p`
+
+}`;

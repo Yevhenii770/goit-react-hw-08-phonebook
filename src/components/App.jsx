@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from './Layout';
+import { Layout } from './Layout/Layout';
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
 import { useEffect, lazy } from 'react';

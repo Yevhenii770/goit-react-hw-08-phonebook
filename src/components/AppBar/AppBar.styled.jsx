@@ -8,4 +8,8 @@ export const Header = styled.header`
   border-bottom: 1px solid gray;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  @media screen and (min-width: 0px) and (max-width: 412px) {
+    flex-direction: column;
+  }
 `;

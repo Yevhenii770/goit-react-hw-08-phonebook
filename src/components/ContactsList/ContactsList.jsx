@@ -2,6 +2,7 @@ import { UlOfContact, ContactItem, Button } from './ContactsList.styled';
 import { selectAllContacts } from 'redux/contacts/contacts-selectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContacts } from 'redux/contacts/contacts-operations';
+import { TextDiv, Number, Name } from './ContactsList.styled';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,11 @@ const ContactList = () => {
     <UlOfContact>
       {visibleContacts.map(({ id, number, name }) => (
         <ContactItem key={id}>
-          {name}: {number}
+          <TextDiv>
+            <Name>{name}</Name>
+            <Number>{number}</Number>
+          </TextDiv>
+
           <Button onClick={() => dispatch(deleteContacts(id))} type="button">
             Delete
           </Button>
