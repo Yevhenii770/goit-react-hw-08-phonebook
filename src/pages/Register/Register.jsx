@@ -25,7 +25,11 @@ export default function Register() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(authOperations.register({ name, email, password }));
+
+    if (name !== '' && email !== '' && password !== '') {
+      dispatch(authOperations.register({ name, email, password }));
+    }
+
     setName('');
     setEmail('');
     setPassword('');

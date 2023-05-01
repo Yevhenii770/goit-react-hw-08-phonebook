@@ -22,7 +22,11 @@ export default function LoginView() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(authOperations.logIn({ email, password }));
+
+    if (email !== '' && password !== '') {
+      dispatch(authOperations.logIn({ email, password }));
+    }
+
     setEmail('');
     setPassword('');
   };
