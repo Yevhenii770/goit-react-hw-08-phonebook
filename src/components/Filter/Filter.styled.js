@@ -11,5 +11,3 @@ export const Label = styled.label`
     width: 100%;
   }
 `;
-
-export const Div = styled.div``;

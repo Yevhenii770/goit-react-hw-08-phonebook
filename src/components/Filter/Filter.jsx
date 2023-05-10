@@ -1,4 +1,4 @@
-import { Label, Div } from './Filter.styled';
+import { Label } from './Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { filterQuery } from '../../redux/contacts/contacts-slice';
 import { TextField } from '@mui/material';
@@ -12,7 +12,7 @@ const Filter = () => {
   };
 
   return (
-    <Div>
+    <div>
       <Label>
         <TextField
           id="outlined-basic"
@@ -23,7 +23,7 @@ const Filter = () => {
           onChange={changeFilter}
         />
       </Label>
-    </Div>
+    </div>
   );
 };
 export default Filter;

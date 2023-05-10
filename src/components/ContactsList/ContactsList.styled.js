@@ -37,7 +37,6 @@ export const Button = styled.button`
   border-radius: 4px;
   color: #ffff;
   background-color: #ff000061;
-
   opacity: 1;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -56,15 +55,8 @@ export const SecondaryText = styled.h2`
   margin-bottom: 15px;
 `;
 
-export const TextDiv = styled.div`
-
-}`;
-
 export const Name = styled.p`
 &:first-letter {
   text-transform: uppercase;
 }
-}`;
-export const Number = styled.p`
-
 }`;

@@ -8,8 +8,7 @@ export const Form = styled.form`
     border-radius: 4px;
 
     @media screen and (min-width: 0px) and (max-width: 412px) {
-   width: calc(100% / 1.1);
-   
+    width: calc(100% / 1.1);
     margin-bottom: 40px;
   }
 }`;
@@ -28,6 +27,7 @@ export const Label = styled.label`
     flex-direction: column;
     margin-bottom: 15px;
 }`;
+
 export const Button = styled.button`
     margin: 0 auto;
     display: block;
@@ -41,7 +41,6 @@ export const Button = styled.button`
     box-shadow: 0 4px 4px rgba(0,0,0,.15);
     opacity: 1;
     transition: background-color .25s cubic-bezier(.4,0,.2,1);
-
     cursor: pointer;
     
     &:hover {
