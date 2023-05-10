@@ -1,4 +1,4 @@
-import { UlOfContact, ContactItem, Button, Name } from './ContactsList.styled';
+import { UlOfContact, ContactItem, Button } from './ContactsList.styled';
 import { selectAllContacts } from 'redux/contacts/contacts-selectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContacts } from 'redux/contacts/contacts-operations';
