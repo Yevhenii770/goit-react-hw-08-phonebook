@@ -5,7 +5,7 @@ import { selectLoading } from 'redux/contacts/contacts-selectors';
 import {
   MainText,
   SecondaryText,
-} from '../components/ContactsList/ContactsList.styled';
+} from '../../components/ContactsList/ContactsList.styled';
 import ContactList from 'components/ContactsList/ContactsList';
 import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';

@@ -16,7 +16,7 @@ export const ContactItem = styled.li`
   align-items: center;
   justify-content: space-between;
 
-  background: #eaeaea;
+
   width: calc((100% - 30px) / 2);
   
   border-radius: 4px;
@@ -26,6 +26,8 @@ export const ContactItem = styled.li`
   @media screen and (min-width: 0px) and (max-width: 412px) {
     width: 90%;
   }
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 `;
 
@@ -56,7 +58,12 @@ export const SecondaryText = styled.h2`
 `;
 
 export const Name = styled.p`
+color:white;
 &:first-letter {
   text-transform: uppercase;
 }
+}`;
+
+export const Text = styled.p`
+color:white;
 }`;
