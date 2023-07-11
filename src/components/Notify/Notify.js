@@ -25,7 +25,7 @@ export function PushNotifyError(name) {
   return new Notify({
     status: 'error',
     title: 'Error !',
-    text: `${name}is already in contacts !`,
+    text: `${name}`,
     effect: 'fade',
     speed: 300,
     customClass: null,

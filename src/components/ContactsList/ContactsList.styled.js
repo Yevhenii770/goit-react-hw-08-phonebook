@@ -17,16 +17,17 @@ export const ContactItem = styled.li`
   justify-content: space-between;
 
 
-  width: calc((100% - 30px) / 2);
+
+  width: calc((100% - 35px) / 2);
   
   border-radius: 4px;
-  padding: 2px;
+  padding: 5px;
   
   
   @media screen and (min-width: 0px) and (max-width: 412px) {
     width: 90%;
   }
-  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  background-color: #2196f3;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 `;
@@ -38,13 +39,13 @@ export const Button = styled.button`
   border: 0 solid transparent;
   border-radius: 4px;
   color: #ffff;
-  background-color: #ff000061;
+  background-color: #ff0000;
   opacity: 1;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
   &:hover {
-    background-color: #f71818;
+    background-color: #ff0808cc;
   }
 `;
 

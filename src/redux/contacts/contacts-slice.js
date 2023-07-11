@@ -33,38 +33,70 @@ const contactSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  extraReducers: {
-    [fetchContacts.pending]: handlePending,
-    [addContacts.pending]: handlePending,
-    [deleteContacts.pending]: handlePending,
-    [fetchContacts.rejected]: handleRejected,
-    [addContacts.rejected]: handleRejected,
-    [deleteContacts.rejected]: handleRejected,
-    [fetchContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = action.payload;
-    },
-    [addContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items.push(action.payload);
-    },
-    [deleteContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      const index = state.items.findIndex(
-        contact => contact.id === action.payload.id
-      );
-      state.items.splice(index, 1);
-    },
-    [authOperations.logOut.fulfilled](state) {
-      state.items = [];
-      state.error = null;
-      state.isLoading = false;
-    },
-  },
+  extraReducers: builder =>
+    builder
+      .addCase(fetchContacts.pending, handlePending)
+      .addCase(addContacts.pending, handlePending)
+      .addCase(deleteContacts.pending, handlePending)
+      .addCase(fetchContacts.rejected, handleRejected)
+      .addCase(addContacts.rejected, handleRejected)
+      .addCase(deleteContacts.rejected, handleRejected)
+      .addCase(fetchContacts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(addContacts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items.push(action.payload);
+      })
+      .addCase(deleteContacts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        const index = state.items.findIndex(
+          contact => contact.id === action.payload.id
+        );
+        state.items.splice(index, 1);
+      })
+      .addCase(authOperations.logOut.fulfilled, (state, action) => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
+      }),
 });
 
 export const contactsReducer = contactSlice.reducer;
 export const { filterQuery } = userFilter.actions;
+
+// {
+//     [fetchContacts.pending]: handlePending,
+//     [addContacts.pending]: handlePending,
+//     [deleteContacts.pending]: handlePending,
+//     [fetchContacts.rejected]: handleRejected,
+//     [addContacts.rejected]: handleRejected,
+//     [deleteContacts.rejected]: handleRejected,
+//     [fetchContacts.fulfilled](state, action) {
+//       state.isLoading = false;
+//       state.error = null;
+//       state.items = action.payload;
+//     },
+//     [addContacts.fulfilled](state, action) {
+//       state.isLoading = false;
+//       state.error = null;
+//       state.items.push(action.payload);
+//     },
+//     [deleteContacts.fulfilled](state, action) {
+// state.isLoading = false;
+// state.error = null;
+// const index = state.items.findIndex(
+//   contact => contact.id === action.payload.id
+// );
+// state.items.splice(index, 1);
+//     },
+//     [authOperations.logOut.fulfilled](state) {
+//       state.items = [];
+//       state.error = null;
+//       state.isLoading = false;
+//     },
+//   },

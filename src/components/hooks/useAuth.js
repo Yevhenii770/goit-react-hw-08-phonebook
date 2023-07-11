@@ -3,12 +3,12 @@ import authSelectors from '../../redux/auth/auth-selectors';
 
 export const useAuth = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-  const isRefreshing = useSelector(authSelectors.selectIsRefreshing);
+  const isLoading = useSelector(authSelectors.selectIsLoading);
   const user = useSelector(authSelectors.getUsername);
 
   return {
     isLoggedIn,
-    isRefreshing,
+    isLoading,
     user,
   };
 };
