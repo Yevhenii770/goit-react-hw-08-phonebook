@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { Form, Button, Label } from './ContactForm.styled';
+import { Form, ButtonBox, Label } from './ContactForm.styled';
 import { PushNotify, PushNotifyError } from '../Notify/Notify';
 import { selectAllContacts } from 'redux/contacts/contacts-selectors';
 import { addContacts } from 'redux/contacts/contacts-operations';
 import { TextField } from '@mui/material';
+import { ButtonComponent } from 'components/ButtonComponent/ButtonComponent';
 
 function ContactForm() {
   const nameInputId = nanoid();
@@ -62,7 +63,7 @@ function ContactForm() {
         />
       </Label>
 
-      <Button type="submit">Add contacts</Button>
+      <ButtonComponent type="submit" title="Add contacts" />
     </Form>
   );
 }
