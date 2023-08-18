@@ -1,7 +1,6 @@
 import { authOperations, authSelectors } from 'redux/auth';
 import { Username, Wrapper } from './UserMenu.stuled';
 import { useSelector, useDispatch } from 'react-redux';
-import { Button } from './UserMenu.stuled';
 import { ButtonComponent } from 'components/ButtonComponent/ButtonComponent';
 
 export const UserMenu = () => {
