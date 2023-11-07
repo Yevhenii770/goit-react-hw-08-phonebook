@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.0ba84ad5.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.c1a6c4d5.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.d904690b.js",
     "static/js/222.ddd760fc.chunk.js": "/goit-react-hw-08-phonebook/static/js/222.ddd760fc.chunk.js",
     "static/js/93.382167a7.chunk.js": "/goit-react-hw-08-phonebook/static/js/93.382167a7.chunk.js",
     "static/js/639.1e08351c.chunk.js": "/goit-react-hw-08-phonebook/static/js/639.1e08351c.chunk.js",
-    "static/js/305.82d31325.chunk.js": "/goit-react-hw-08-phonebook/static/js/305.82d31325.chunk.js",
+    "static/js/305.9381e541.chunk.js": "/goit-react-hw-08-phonebook/static/js/305.9381e541.chunk.js",
     "static/js/563.0ddb2262.chunk.js": "/goit-react-hw-08-phonebook/static/js/563.0ddb2262.chunk.js",
     "static/media/phonebook.jpg": "/goit-react-hw-08-phonebook/static/media/phonebook.867c60963d222049727e.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.0ba84ad5.css.map": "/goit-react-hw-08-phonebook/static/css/main.0ba84ad5.css.map",
-    "main.c1a6c4d5.js.map": "/goit-react-hw-08-phonebook/static/js/main.c1a6c4d5.js.map",
+    "main.d904690b.js.map": "/goit-react-hw-08-phonebook/static/js/main.d904690b.js.map",
     "222.ddd760fc.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/222.ddd760fc.chunk.js.map",
     "93.382167a7.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/93.382167a7.chunk.js.map",
     "639.1e08351c.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/639.1e08351c.chunk.js.map",
-    "305.82d31325.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/305.82d31325.chunk.js.map",
+    "305.9381e541.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/305.9381e541.chunk.js.map",
     "563.0ddb2262.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/563.0ddb2262.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ba84ad5.css",
-    "static/js/main.c1a6c4d5.js"
+    "static/js/main.d904690b.js"
   ]
 }
