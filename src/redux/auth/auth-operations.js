@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { PushNotifyError } from 'components/Notify/Notify';
-
+import { PushNotifyError, dropError } from 'components/Notify/Notify';
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
 const token = {
@@ -19,7 +18,8 @@ const register = createAsyncThunk('auth/register', async credentials => {
     token.set(data.token);
     return data;
   } catch (error) {
-    PushNotifyError(error.message);
+    console.log(error);
+    dropError(error.response.status);
   }
 });
 
@@ -29,7 +29,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     token.set(data.token);
     return data;
   } catch (error) {
-    PushNotifyError(error.message);
+    dropError(error.response.status);
   }
 });
 

@@ -1,11 +1,19 @@
 import Notify from 'simple-notify';
 import 'simple-notify/dist/simple-notify.min.css';
 
-export function PushNotify(name) {
+const errors = {
+  400: 'Wrong email or password',
+};
+
+export const dropError = code => {
+  return PushNotifyError(errors[code]);
+};
+
+export function PushNotify(text) {
   return new Notify({
     status: 'success',
     title: 'Success !',
-    text: `contact ${name} added.`,
+    text: `contact ${text} added.`,
     effect: 'fade',
     speed: 300,
     customClass: null,
@@ -21,11 +29,11 @@ export function PushNotify(name) {
   });
 }
 
-export function PushNotifyError(name) {
+export function PushNotifyError(text) {
   return new Notify({
     status: 'error',
     title: 'Error !',
-    text: `${name}`,
+    text: `${text}`,
     effect: 'fade',
     speed: 300,
     customClass: null,
